@@ -17,12 +17,12 @@ function Toggl() {
 }
 function Toggle() {
   const [isOn, setIsOn] = useState(false);
-  let click ="OFF"
+   const color= isOn ? {background:"red"} : {background:"white"}
   function HandleClick(){
     setIsOn((isOn)=>!isOn)
     return(isOn)
   }
   return (
-  <button onClick={HandleClick}>{ isOn ? "ON":"OFF"}</button>);
+  <button onClick={HandleClick} style={color}>{ isOn ? "ON":"OFF"}</button>);
 }
 export default Toggle;
